@@ -91,7 +91,10 @@ jQuery('#mycarousel2').jcarousel({
             </div>
         </div>
         
-     
+        <!-- Shameless self-promotion -->
+        <div class="logoshell">
+            <a href="http://rabidgadfly.com/2013/03/super-easy-angular-image-gallery/" target="_blank" title="Check out more Angular posts at rabidGadfly.com"><img src="http://rabidgadfly.com/assets/logos/rabidgadfly-plunker-100.jpg" alt="rabidGadfly.com"/></a>
+        </div>
         
     </div>
 

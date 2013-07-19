@@ -80,12 +80,7 @@
 ];
 
 //data;
-        $scope.selected =   {
-        "title":"Altair",
-        "id":"ED06-0208-1",
-        "desc":"A high-tech infrared imaging sensor in its underbelly pod, the Altair unmanned aircraft flew repeated passes over the Esperanza fire to aid firefighting efforts.",
-        "image":"altair1.jpg"
-    };
+        $scope.selected = data[0];
   //  });
     
     // Scroll to appropriate position based on image index and width

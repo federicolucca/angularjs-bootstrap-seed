@@ -1,40 +1,4 @@
-'use strict';
-
-/* Controllers */
-
-
- angular.module('myApp.controllers', ['myApp.services','angular-carousel'])
-      .controller('MyCtrl2', ['$scope', function($scope) {
-
-	$scope.imagesCover=[{url:'http://static.flickr.com/75/199481072_b4a0d09597_s.jpg'},
-{url:'http://static.flickr.com/57/199481087_33ae73a8de_s.jpg'},
-{url:'http://static.flickr.com/69/199481255_fdfe885f87_s.jpg'},
-{url:'http://static.flickr.com/72/199481203_ad4cdcf109_s.jpg'},
-{url:'http://static.flickr.com/58/199481143_3c148d9dd3_s.jpg'},
-{url:'http://static.flickr.com/77/199481108_4359e6b971_s.jpg'},
-{url:'http://static.flickr.com/57/199481087_33ae73a8de_s.jpg'}];
-	$scope.imagesFilo=[{url:'http://static.flickr.com/75/199481072_b4a0d09597_s.jpg'},
-{url:'http://static.flickr.com/57/199481087_33ae73a8de_s.jpg'},
-{url:'http://static.flickr.com/69/199481255_fdfe885f87_s.jpg'},
-{url:'http://static.flickr.com/72/199481203_ad4cdcf109_s.jpg'},
-{url:'http://static.flickr.com/58/199481143_3c148d9dd3_s.jpg'},
-{url:'http://static.flickr.com/77/199481108_4359e6b971_s.jpg'},
-{url:'http://static.flickr.com/57/199481087_33ae73a8de_s.jpg'}];
-	$scope.imageSelect=$scope.imagesCover[0];
-
-	$scope.addImage=function(img){
-		$scope.imageSelect=img;
-	};
-    }])
-
- .controller('GalleryController', ['$scope', function($scope,DataSource) {
-
-    var IMAGE_WIDTH = 405;
-    $scope.IMAGE_LOCATION = "http://rabidgadfly.com/assets/angular/gallery1/";
-    
-    // Retrieve and set data 
-   // DataSource.get("images.json",function(data) {
-        $scope.galleryData = [
+[
     {
         "title":"Altair",
         "id":"ED02-0185-01",
@@ -77,23 +41,4 @@
         "desc":"A high-tech infrared imaging sensor in its underbelly pod, the Altair unmanned aircraft flew repeated passes over the Esperanza fire to aid firefighting efforts.",
         "image":"altair1.jpg"
     }
-];
-
-//data;
-        $scope.selected =   {
-        "title":"Altair",
-        "id":"ED06-0208-1",
-        "desc":"A high-tech infrared imaging sensor in its underbelly pod, the Altair unmanned aircraft flew repeated passes over the Esperanza fire to aid firefighting efforts.",
-        "image":"altair1.jpg"
-    };
-  //  });
-    
-    // Scroll to appropriate position based on image index and width
-    $scope.scrollTo = function(image,ind) {
-        $scope.listposition = {left:(IMAGE_WIDTH * ind * -1) + "px"};
-        $scope.selected = image;
-    };
- }])
-  
-     ;
- 
+]

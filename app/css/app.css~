@@ -91,7 +91,7 @@ ul{
 }
 
 .bg {
-   # background-color:#333;
+    background-color:#333;
     padding:10px;
     border-radius:8px;
     float:left;
