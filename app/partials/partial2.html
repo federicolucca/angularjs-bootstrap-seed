@@ -1,4 +1,3 @@
-
 <!--
 <script type="text/javascript" src="lib/jquery.jcarousel.js"></script>
 <script type="text/javascript">
@@ -45,55 +44,54 @@ jQuery('#mycarousel2').jcarousel({
     <button ng-click="currentSport = currentSport + 1" ng-disabled="currentSport == sportImages.length - 1">next</button>
 
 </div> -->
-  </div>
+</div>
 
- <div class="bg" ng-controller="GalleryController" >
-    
-<!--    Layout the large images horizontally using viewwindow
-        to hide the overflow (all but the current image). -->
-        <div class="mainimageshell">
-            <div class="viewwindow">
-        <!--    fullscroller is referenced from the Controller js
-                to control scrolling -->
-                <ul id="fullscroller" class="fullsizelist" ng-style="listposition" >
-            <!--    Iterate through all images and display them end to end -->
-                    <li ng-repeat="image in galleryData">
-                        <img id="fullsize" class="large" ng-src="{{IMAGE_LOCATION+image.image}}" />
-                    </li>
-                </ul>
-            </div>
+<div class="bg" ng-controller="GalleryController">
+
+    <!--    Layout the large images horizontally using viewwindow
+            to hide the overflow (all but the current image). -->
+    <div class="mainimageshell">
+        <div class="viewwindow">
+            <!--    fullscroller is referenced from the Controller js
+                    to control scrolling -->
+            <ul id="fullscroller" class="fullsizelist" ng-style="listposition">
+                <!--    Iterate through all images and display them end to end -->
+                <li ng-repeat="image in galleryData">
+                    <img id="fullsize" class="large" ng-src="{{IMAGE_LOCATION+image.image}}"/>
+                </li>
+            </ul>
         </div>
-        
-        <!-- Display the description of the current image -->
-        <div class="captionshell">
-            <p class="caption">{{selected.desc}}</p>
-        </div>
-        
-        <div style="clear:both;"></div>
-        
-<!--    Layout the large images horizontally using viewwindow
-        to hide the overflow (all but the current image). -->
-        <div class="thumbsshell">
-            <div class="thumbswrapper">
-                <ul>
-            <!--    Iterate through all images and display them end to end as thumbs -->
-                    <li ng-repeat="image in galleryData">
-                        <div class="thumbwrapper">
-                    <!--    Note ng-click here calls the scrollTo function found in the
-                            controller and passes it its index. This is used to scroll 
-                            the large image to the correct image -->
-                            <a ng-href="" ng-click="scrollTo(image,$index)">
-                                <img class="thumbnail" ng-src="{{IMAGE_LOCATION+image.image}}" />
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-     
-        
     </div>
+
+    <!-- Display the description of the current image -->
+    <div class="captionshell">
+        <p class="caption">{{selected.desc}}</p>
+    </div>
+
+    <div style="clear:both;"></div>
+
+    <!--    Layout the large images horizontally using viewwindow
+            to hide the overflow (all but the current image). -->
+    <div class="thumbsshell">
+        <div class="thumbswrapper">
+            <ul>
+                <!--    Iterate through all images and display them end to end as thumbs -->
+                <li ng-repeat="image in galleryData">
+                    <div class="thumbwrapper">
+                        <!--    Note ng-click here calls the scrollTo function found in the
+                                controller and passes it its index. This is used to scroll
+                                the large image to the correct image -->
+                        <a ng-href="" ng-click="scrollTo(image,$index)">
+                            <img class="thumbnail" ng-src="{{IMAGE_LOCATION+image.image}}"/>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
 
 
 

@@ -1,13 +1,13 @@
 .jcarousel-skin-tango .jcarousel-container {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-   border-radius: 10px;
+    border-radius: 10px;
     background: #F0F6F9;
     border: 1px solid #346F97;
 }
 
 .jcarousel-skin-tango .jcarousel-direction-rtl {
-	direction: rtl;
+    direction: rtl;
 }
 
 .jcarousel-skin-tango .jcarousel-container-horizontal {
@@ -26,12 +26,12 @@
 }
 
 .jcarousel-skin-tango .jcarousel-clip-horizontal {
-    width:  245px;
+    width: 245px;
     height: 75px;
 }
 
 .jcarousel-skin-tango .jcarousel-clip-vertical {
-    width:  75px;
+    width: 75px;
     height: 245px;
 }
 
@@ -41,12 +41,12 @@
 }
 
 .jcarousel-skin-tango .jcarousel-item-horizontal {
-	margin-left: 0;
+    margin-left: 0;
     margin-right: 10px;
 }
 
 .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
-	margin-left: 10px;
+    margin-left: 10px;
     margin-right: 0;
 }
 
@@ -111,7 +111,7 @@
     background-image: url(next-horizontal.png);
 }
 
-.jcarousel-skin-tango .jcarousel-prev-horizontal:hover, 
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover,
 .jcarousel-skin-tango .jcarousel-prev-horizontal:focus {
     background-position: -32px 0;
 }
