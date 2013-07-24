@@ -93,7 +93,12 @@ angular.module('myApp.controllers', ['myApp.services', 'angular-carousel'])
         //  });
 
         // Scroll to appropriate position based on image index and width
-        $scope.scrollTo = function (image, ind) {
+        $scope.scrollToBackGround = function (image, ind) {
+            $scope.listposition = {left: (IMAGE_WIDTH * ind * -1) + "px"};
+            $scope.selected = image;
+        };
+        // Scroll to appropriate position based on image index and width
+        $scope.scrollToForeGround = function (image, ind) {
             $scope.listposition = {left: (IMAGE_WIDTH * ind * -1) + "px"};
             $scope.selected = image;
         };

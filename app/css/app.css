@@ -93,10 +93,9 @@ ul {
 }
 
 .bg {
-    # background-color: #333;
     padding: 10px;
     border-radius: 8px;
-    float: left;
+    margin:0 auto;
 }
 
 .thumbsshell {
@@ -110,7 +109,7 @@ ul {
 .thumbswrapper {
     overflow-x: scroll;
     width: 394px;
-    height: 60px;
+    height: 80px;
     margin: 20px auto;
 }
 
@@ -118,6 +117,33 @@ ul {
     float: left;
     height: 60px;
 }
+.thumbsshellV {
+    background-color: #fff;
+    height: 400px;
+    padding: 10px;
+    border-radius: 8px;
+    float: left;
+}
+
+.thumbswrapperV {
+    overflow-y: scroll;
+    height: 394px;
+    width: 80px;
+    margin: 20px auto;
+}
+
+.thumbwrapperV {
+    float: left;
+    width: 60px;
+}
+
+.liV{
+    display: block!important;
+}
+.thumbnailV{
+    vertical-align: middle !important;
+}
+
 
 .captionshell {
     margin: 0 0 10px 5px;

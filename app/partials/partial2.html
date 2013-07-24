@@ -1,97 +1,115 @@
-<!--
-<script type="text/javascript" src="lib/jquery.jcarousel.js"></script>
-<script type="text/javascript">
+<!-- Jumbotron -->
+<div class="jumbotron">
+    <h1>Marketing stuff!</h1>
 
-jQuery(document).ready(function() {
-    jQuery('#mycarousel1').jcarousel({
-        vertical: true,
-        scroll: 2
-    });
-jQuery('#mycarousel2').jcarousel({       
-        scroll: 2
-    });
-});
 
-</script>
 
-  <div class="modal" ng-controller="MyCtrl2" >
-      <div class="modal-header">
-<div class="selectImage">
-<img ng-src="{{imageSelect.url}}" /></div>
-     <div class="coverCaro">
-  <ul id="mycarousel1" class="jcarousel jcarousel-skin-tango">
-    <li ng-repeat="image in imagesCover"><img ng-click="addImage(image)" src="{{image.url}}" width="75" height="75" alt="" /></li>
-  
-  </ul></div>
 
- 	
-<div class="filoCaro">
-<ul id="mycarousel2" class="jcarousel jcarousel-skin-tango">
- <li ng-repeat="image in imagesFilo"><img ng-click="addImage(image)" src="{{image.url}}" width="75" height="75" alt="" /></li>
-  </ul></div>
-    
-      </div> 
-<div ng-controller="demoController" style="width:400px;margin:auto auto;height:300px;">
-<h3 data-ng-bind-html-unsafe="'Discover sports (slide ' + (currentSport + 1) + '/' + sportImages.length + ')'"></h3>
-    This carousel has two way data-binding, custom controls and is buffered (only 3 slides rendered)<br><br>
-    <ul data-rn-carousel rn-carousel-buffered rn-carousel-index="currentSport" class="image">
-      <li ng-repeat="image in sportImages" style="background-image:url({{ image }});">
-        <div class="layer" ng-bind-html-unsafe="image"></div>
-      </li>
-    </ul>
 
-    <button ng-click="currentSport = currentSport - 1" ng-disabled="currentSport == 0">prev</button>
-    <button ng-click="currentSport = currentSport + 1" ng-disabled="currentSport == sportImages.length - 1">next</button>
 
-</div> -->
-</div>
 
-<div class="bg" ng-controller="GalleryController">
 
-    <!--    Layout the large images horizontally using viewwindow
-            to hide the overflow (all but the current image). -->
-    <div class="mainimageshell">
-        <div class="viewwindow">
-            <!--    fullscroller is referenced from the Controller js
-                    to control scrolling -->
-            <ul id="fullscroller" class="fullsizelist" ng-style="listposition">
-                <!--    Iterate through all images and display them end to end -->
-                <li ng-repeat="image in galleryData">
-                    <img id="fullsize" class="large" ng-src="{{IMAGE_LOCATION+image.image}}"/>
-                </li>
-            </ul>
+
+
+
+    <div class="row-fluid" ng-controller="GalleryController">
+        <div class="span2">
         </div>
-    </div>
-
-    <!-- Display the description of the current image -->
-    <div class="captionshell">
-        <p class="caption">{{selected.desc}}</p>
-    </div>
-
-    <div style="clear:both;"></div>
-
-    <!--    Layout the large images horizontally using viewwindow
-            to hide the overflow (all but the current image). -->
-    <div class="thumbsshell">
-        <div class="thumbswrapper">
-            <ul>
-                <!--    Iterate through all images and display them end to end as thumbs -->
-                <li ng-repeat="image in galleryData">
-                    <div class="thumbwrapper">
-                        <!--    Note ng-click here calls the scrollTo function found in the
-                                controller and passes it its index. This is used to scroll
-                                the large image to the correct image -->
-                        <a ng-href="" ng-click="scrollTo(image,$index)">
-                            <img class="thumbnail" ng-src="{{IMAGE_LOCATION+image.image}}"/>
-                        </a>
+        <div class="span8">
+            <div class="alert">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <h4>
+                    Alert!
+                </h4> <strong>Warning!</strong> Best check yo self, you're not looking too good.
+            </div>
+            <div class="row-fluid">
+                <div class="span8">
+                    <div class="mainimageshell">
+                        <div class="viewwindow">
+                            <!--    fullscroller is referenced from the Controller js
+                                    to control scrolling -->
+                            <ul id="fullscroller" class="fullsizelist" ng-style="listposition">
+                                <!--    Iterate through all images and display them end to end -->
+                                <li ng-repeat="image in galleryData">
+                                    <img id="fullsize" class="large" ng-src="{{IMAGE_LOCATION+image.image}}"/>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </li>
-            </ul>
+                </div>
+                <div class="span4">
+                    <div class="thumbsshellV">
+                        <div class="thumbswrapperV">
+                            <ul>
+                                <!--    Iterate through all images and display them end to end as thumbs -->
+                                <li ng-repeat="image in galleryData" class="liV">
+                                    <div class="thumbwrapperV">
+                                        <!--    Note ng-click here calls the scrollTo function found in the
+                                                controller and passes it its index. This is used to scroll
+                                                the large image to the correct image -->
+                                        <a ng-href="" ng-click="scrollToBackGround(image,$index)">
+                                            <img class="thumbnailV" ng-src="{{IMAGE_LOCATION+image.image}}"/>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="thumbsshell">
+                    <div class="thumbswrapper">
+                        <ul>
+                            <!--    Iterate through all images and display them end to end as thumbs -->
+                            <li ng-repeat="image in galleryData">
+                                <div class="thumbwrapper">
+                                    <!--    Note ng-click here calls the scrollTo function found in the
+                                            controller and passes it its index. This is used to scroll
+                                            the large image to the correct image -->
+                                    <a ng-href="" ng-click="scrollToForeGround(image,$index)">
+                                        <img class="thumbnail" ng-src="{{IMAGE_LOCATION+image.image}}"/>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+        <div class="span2">
         </div>
     </div>
+
+<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+<a class="btn btn-large btn-success" href="#">Get started today</a>
+
 
 
 </div>
 
+<hr>
 
+<!-- Example row of columns -->
+<div class="row-fluid">
+    <div class="span4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn" href="#">View details »</a></p>
+    </div>
+    <div class="span4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn" href="#">View details »</a></p>
+    </div>
+    <div class="span4">
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+        <p><a class="btn" href="#">View details »</a></p>
+    </div>
+</div>
 
+<hr>
