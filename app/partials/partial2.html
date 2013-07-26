@@ -8,7 +8,7 @@
 
 
 
-
+    <!--
 
 
 
@@ -26,14 +26,13 @@
                 <div class="span8">
                     <div class="mainimageshell">
                         <div class="viewwindow">
-                            <!--    fullscroller is referenced from the Controller js
-                                    to control scrolling -->
-                            <ul id="fullscroller" class="fullsizelist" ng-style="listposition">
-                                <!--    Iterate through all images and display them end to end -->
-                                <li ng-repeat="image in galleryData">
-                                    <img id="fullsize" class="large" ng-src="{{IMAGE_LOCATION+image.image}}"/>
-                                </li>
-                            </ul>
+                                       <div id="foreground">
+                                    <img id="fullsize" class="large" ng-src="{{IMAGE_LOCATION+selectedForeGround.image}}" />
+
+                                                   </div>   <div id="background">
+                                    <img id="fullsize" class="large" ng-src="{{IMAGE_LOCATION+selectedBackGround.image}}"/>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -42,7 +41,7 @@
                         <div class="thumbswrapperV">
                             <ul>
                                 <!--    Iterate through all images and display them end to end as thumbs -->
-                                <li ng-repeat="image in galleryData" class="liV">
+                                <li ng-repeat="image in galleryDataBackGround" class="liV">
                                     <div class="thumbwrapperV">
                                         <!--    Note ng-click here calls the scrollTo function found in the
                                                 controller and passes it its index. This is used to scroll
@@ -63,7 +62,7 @@
                     <div class="thumbswrapper">
                         <ul>
                             <!--    Iterate through all images and display them end to end as thumbs -->
-                            <li ng-repeat="image in galleryData">
+                            <li ng-repeat="image in galleryDataForeGround">
                                 <div class="thumbwrapper">
                                     <!--    Note ng-click here calls the scrollTo function found in the
                                             controller and passes it its index. This is used to scroll
@@ -82,12 +81,76 @@
         </div>
         <div class="span2">
         </div>
-    </div>
+    </div>                 -->
 
 <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 <a class="btn btn-large btn-success" href="#">Get started today</a>
 
 
+    <div class="sliderGallery">
+        <ul>
+            <li><img class="pb-airportexpress" src="http://static.jqueryfordesigners.com/demo/images/pb_airport_express.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_airport_extreme.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_timecapsule_20080115.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_keyboards20070807.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_mighty_mouse.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_cinema_display20071026.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_mac_pro_20070622.jpg" /></li>
+
+            <li><img class="pb-macmini" src="http://static.jqueryfordesigners.com/demo/images/pb_mac_mini.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_macbook20071026.jpg" /></li>
+            <li><img class="pb-macbookair" src="http://static.jqueryfordesigners.com/demo/images/pb_macbookair_20080115.jpg" /></li>
+            <li><img class="pb-macbookpro" src="http://static.jqueryfordesigners.com/demo/images/pb_macbook_pro20071026.jpg" /></li>
+            <li><img class="pb-imac" src="http://static.jqueryfordesigners.com/demo/images/pb_imac20071026.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_macosx_20080115.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_ilife_20080115.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_dot_mac_20080115.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_iwork_20080115.jpg" /></li>
+
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_quicktime.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_aperture20080212.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_final_cut_studio2_20080115.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_final_cut_express_20080115.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_logic_studio_20080115.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_logic_express_20080115.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_shake_20080115.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_apple_remote_desktop_20080115.jpg" /></li>
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_xserve.jpg" /></li>
+
+            <li><img src="http://static.jqueryfordesigners.com/demo/images/pb_xserve_raid.jpg" /></li>
+            <li><img class="pb-xsan" src="http://static.jqueryfordesigners.com/demo/images/pb_xsan_20080115.jpg" /></li>
+            <li><img class="pb-macosxserver" src="http://static.jqueryfordesigners.com/demo/images/pb_macosx_server20071016.jpg" /></li>
+        </ul>
+        <div class="slider">
+            <div class="handle"></div>
+            <span class="slider-lbl1">Wi-Fi</span>
+            <span class="slider-lbl3">Macs</span>
+            <span class="slider-lbl4">Applications</span>
+            <span class="slider-lbl5">Servers</span>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" charset="utf-8">
+        window.onload = function () {
+            var container = $('div.sliderGallery');
+            var ul = $('ul', container);
+
+            var itemsWidth = ul.innerWidth() - container.outerWidth();
+
+            $('.slider', container).slider({
+                min: 0,
+                max: itemsWidth,
+                handle: '.handle',
+                stop: function (event, ui) {
+                    ul.animate({'left' : ui.value * -1}, 500);
+                },
+                slide: function (event, ui) {
+                    ul.css('left', ui.value * -1);
+                }
+            });
+        };
+    </script>
 
 </div>
 
